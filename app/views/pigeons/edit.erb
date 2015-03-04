@@ -2,7 +2,17 @@
 
 <h1>Edit Pigeon</h1>
 
-<!-- form goes here -->
+<form action="/pigeons/<%= @pigeon.id %>/update" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+    
+    <label>Pigeon's Name<input type="text" name="pigeon[name]" value="<% @pigeon.name %>"></label>
+    <label>Color<input type="text" name="pigeon[color]" value="<% @pigeon.color %>"></label>
+    <label>Gender<input type="text" name="pigeon[gender]" value=" <% @pigeon.gender %>"></label>
+    <label>Address<input type="text" name="pigeon[lives]" value=" <% @pigeon.lives %>"></label>
+
+  <input type="submit" value="submit">
+</form> 
+
 
 <a class="button" href="/pigeons">Cancel</a>
 
